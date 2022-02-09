@@ -130,7 +130,7 @@ const userController = {
         websitename && username && email && password ? true : false;
       if (isGoodInput) {
         // encrypting the passwords before storing on the database
-        const cryptedPassword = await CryptoJS.AES.encrypt(
+        const cryptedPassword = CryptoJS.AES.encrypt(
           password,
           process.env.SECRET_KEY
         ).toString();
