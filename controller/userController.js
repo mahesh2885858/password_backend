@@ -139,7 +139,6 @@ const userController = {
           { _id: req.id },
           { $push: { items: body } }
         );
-        console.log(user);
         if (user) {
           res.status(200).send("added item into database");
         } else {
